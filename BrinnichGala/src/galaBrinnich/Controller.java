@@ -53,6 +53,7 @@ public class Controller {
 		this.username = username;
 		nw = new NetworkClient(host, port);
 		new Receiver(nw, this);
+		nw.send("**"+username+" is online.**");
 	}
 	
 	/**
